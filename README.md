@@ -9,11 +9,17 @@ Chatbot RAG is an AI-powered conversational assistant designed to emulate Marcus
 
 ## **🚀 Features**
 ✔ **Retrieval-Augmented Generation (RAG):** Generates answers based on Marcus Aurelius' *Meditations*.  
+
 ✔ **FastAPI Backend:** High-performance, asynchronous API framework for handling chatbot interactions.
+
 ✔ **LangChain Integration:** Modular framework for integrating Large Language Models (LLMs) with external data sources.  
+
 ✔ **Pinecone Vector Search:** Retrieves relevant quotes from *Meditations*.  
+
 ✔ **Lightweight Frontend:** Deployed on GitHub Pages with a simple HTML/CSS/JS interface.  
+
 ✔ Docker - Containerized deployment ensuring scalability and easy integration.
+
 ✔ **Cloud Deployment:** Backend on Railway, frontend on GitHub Pages.  
 
 ---
@@ -81,7 +87,9 @@ To update, modify the files in the `docs/` folder and push changes.
 
 ## **📌 Usage**
 1️⃣ **Open the Chatbot:** [`https://fullfran.github.io/chatbot-RAG/`](https://fullfran.github.io/chatbot-RAG/)  
+
 2️⃣ **Type a question related to Stoicism.**  
+
 3️⃣ **Receive an answer based on *Meditations* by Marcus Aurelius.**  
 
 ---
@@ -130,9 +138,7 @@ This project demonstrates expertise in:
 
 - Cloud AI Integration: Leveraging cloud-based AI APIs for enhanced performance.
 
-## Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
+
 
 
