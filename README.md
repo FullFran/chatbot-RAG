@@ -1,6 +1,6 @@
 # **Chatbot RAG - Marco Aurelio** 🏛️🤖  
 _A conversational AI chatbot based on Retrieval-Augmented Generation (RAG), inspired by the Stoic philosophy of Marcus Aurelius._
-
+Robust and scalable RAG chatbot designed to integrate advanced AI capabilities for intelligent question-answering. This project leverages cutting-edge natural language processing (NLP) and vector search technologies to enhance the chatbot's accuracy and efficiency.
 
 ## **📜 Overview**
 Chatbot RAG is an AI-powered conversational assistant designed to emulate Marcus Aurelius' philosophy. It uses **FastAPI** for the backend, **LangChain** for retrieval-augmented generation (RAG), and is deployed across **Railway (backend)** and **GitHub Pages (frontend)**.
@@ -9,10 +9,11 @@ Chatbot RAG is an AI-powered conversational assistant designed to emulate Marcus
 
 ## **🚀 Features**
 ✔ **Retrieval-Augmented Generation (RAG):** Generates answers based on Marcus Aurelius' *Meditations*.  
-✔ **FastAPI Backend:** Efficient API to handle chat requests.  
-✔ **LangChain Integration:** Manages memory and response generation.  
+✔ **FastAPI Backend:** High-performance, asynchronous API framework for handling chatbot interactions.
+✔ **LangChain Integration:** Modular framework for integrating Large Language Models (LLMs) with external data sources.  
 ✔ **Pinecone Vector Search:** Retrieves relevant quotes from *Meditations*.  
 ✔ **Lightweight Frontend:** Deployed on GitHub Pages with a simple HTML/CSS/JS interface.  
+✔ Docker - Containerized deployment ensuring scalability and easy integration.
 ✔ **Cloud Deployment:** Backend on Railway, frontend on GitHub Pages.  
 
 ---
@@ -70,15 +71,11 @@ git push origin main
 ```
 Railway will automatically detect and deploy updates.
 
-✅ **Backend URL:** [`https://chatbot-rag-production.up.railway.app/`](https://chatbot-rag-production.up.railway.app/)
-
 ---
 
 ### **Frontend: GitHub Pages**
 The frontend is served via **GitHub Pages**.  
 To update, modify the files in the `docs/` folder and push changes.
-
-✅ **Frontend URL:** [`https://fullfran.github.io/chatbot-RAG/`](https://fullfran.github.io/chatbot-RAG/)
 
 ---
 
@@ -97,3 +94,48 @@ PINECONE_API_KEY=your_pinecone_api_key
 PINECONE_ENV=us-east1-gcp
 PINECONE_INDEX=marcoaurelio
 ```
+
+## API Endpoints
+
+The chatbot API provides endpoints for querying the RAG model:
+
+- POST /chat - Sends a user query and retrieves an AI-generated response.
+
+- POST /ingest - Indexes new documents into the vector database.
+
+## Technology Stack & Relevant Expertise
+
+This project demonstrates expertise in:
+
+### Backend Development
+
+- FastAPI: Async API development with dependency injection and Pydantic validation.
+
+- Docker & Docker Compose: Containerization for seamless deployment.
+
+
+### AI & NLP
+
+- LangChain: LLM orchestration with advanced prompt engineering.
+
+- OpenAI API: Integration of GPT-based language models.
+
+- Pinecone: High-performance vector search for information retrieval.
+
+### DevOps & Cloud
+
+- Containerization: Deployment-ready with Docker.
+
+- Scalability: Microservices-based architecture ensuring extensibility.
+
+- Cloud AI Integration: Leveraging cloud-based AI APIs for enhanced performance.
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
