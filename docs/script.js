@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://chatbot-rag-production.up.railway.app/"; // Reemplaza con tu URL de Railway
+const BACKEND_URL = "https://chatbot-rag-production.up.railway.app";
 
 document.addEventListener("DOMContentLoaded", function () {
     const chatForm = document.getElementById("chat-form");
@@ -53,3 +53,4 @@ document.addEventListener("DOMContentLoaded", function () {
         return text.replace(/\n/g, "<br>").replace(/"(.*?)"/g, "<blockquote>$1</blockquote>");
     }
 });
+
