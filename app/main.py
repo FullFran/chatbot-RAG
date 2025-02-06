@@ -11,7 +11,7 @@ app = FastAPI()
 # 🔹 Habilitar CORS para permitir conexiones desde GitHub Pages
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://fullfran.github.io/chatbot-RAG/"],  # Reemplaza con tu URL de GitHub Pages
+    allow_origins=["https://fullfran.github.io/chatbot-RAG"],  # Reemplaza con tu URL de GitHub Pages
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
