@@ -7,6 +7,15 @@ from app.chatbot import generar_respuesta
 
 app = FastAPI()
 
+# 🔹 Habilitar CORS para permitir conexiones desde GitHub Pages
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://fullfran.github.io"],  # Reemplaza con tu URL de GitHub Pages
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Servir archivos estáticos (CSS, JS)
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
