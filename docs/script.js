@@ -1,3 +1,5 @@
+const BACKEND_URL = "https://chatbot-rag-production.up.railway.app/"; // Reemplaza con tu URL de Railway
+
 document.addEventListener("DOMContentLoaded", function () {
     const chatForm = document.getElementById("chat-form");
     const chatBox = document.getElementById("chat-box");
@@ -15,11 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         addMessage("Tú", userMessage, "user");
 
-        // Mostrar indicador de "escribiendo..."
         typingIndicator.style.display = "block";
 
         try {
-            const response = await fetch("/chat", {
+            const response = await fetch(`${BACKEND_URL}/chat`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query: userMessage }),
@@ -30,10 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             const data = await response.json();
-            
-            // Ocultar el indicador de "escribiendo..."
             typingIndicator.style.display = "none";
-
             addMessage("Marco Aurelio", formatResponse(data.respuesta), "bot");
         } catch (error) {
             typingIndicator.style.display = "none";
