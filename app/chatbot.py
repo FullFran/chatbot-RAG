@@ -3,7 +3,8 @@ from langchain_google_genai.chat_models import ChatGoogleGenerativeAI
 from app.embeddings import embeddings
 from app.vectorstore import buscar_vector
 from app.config import GOOGLE_API_KEY
-
+from langchain.schema import OutputParserException
+from google.api_core.exceptions import InternalServerError
 # Configurar memoria del chatbot
 memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
@@ -37,7 +38,8 @@ def generar_respuesta(query):
     mensaje_completo = f"{SYSTEM_MESSAGE}\n\n{description}\n\nContexto: {context}\n\nUsuario: {query}"
 
     # Generar respuesta con Gemini
-    respuesta = chat_model.predict(mensaje_completo)
+    respuesta = chat_model.invoke(mensaje_completo)
+    respuesta = respuesta.content 
 
     # Guardar en memoria
     memory.save_context({"query": query}, {"response": respuesta})
