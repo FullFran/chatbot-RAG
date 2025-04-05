@@ -3,6 +3,6 @@ uvicorn
 google-generativeai
 langchain
 langchain-google-genai
-pinecone-client
+pinecone
 python-dotenv
 jinja2
