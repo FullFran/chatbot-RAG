@@ -1,8 +1,8 @@
-from pinecone import Pinecone
+import pinecone
 from app.config import PINECONE_API_KEY, PINECONE_INDEX
 from app.embeddings import embeddings
 
-pc = Pinecone(api_key=PINECONE_API_KEY)
+pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
 index = pc.Index(PINECONE_INDEX)
 
 # Descripción de la base de datos
