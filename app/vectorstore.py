@@ -1,5 +1,5 @@
 import pinecone
-from app.config import PINECONE_API_KEY, PINECONE_INDEX
+from app.config import PINECONE_API_KEY, PINECONE_INDEX, PINECONE_ENVIRONMENT
 from app.embeddings import embeddings
 
 pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENVIRONMENT)
